@@ -1,0 +1,229 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { Rancho } from "next/font/google";
+
+
+const rancho = Rancho({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const heroImages = [
+  "/images/hero/hero-image.jpg",
+  "/images/hero/hero-image1.jpg",
+  "/images/hero/hero-image2.jpg",
+  "/images/hero/hero-image3.jpg",
+];
+
+const funFacts = [
+  "Small steps lead to mastery.",
+  "Read 20 min daily, grow your mind.",
+  "Mistakes mean you're learning.",
+  "Curiosity fuels lifelong learning.",
+  "Knowledge compounds like interest.",
+  "Asking questions shows intelligence.",
+  "Challenges make your brain stronger.",
+  "Write notes to remember better.",
+  "Consistency beats cramming.",
+  "Teach to learn faster.",
+  "A growth mindset makes the impossible possible.",
+  "Small goals lead to big wins.",
+  "Learn a new word daily.",
+  "Active reading improves memory.",
+  "Brain breaks boost focus.",
+  "Curiosity opens unseen doors.",
+  "Failing teaches more than success.",
+  "Practice strengthens your brain.",
+  "Knowledge is yours to keep.",
+  "Reading opens new opportunities.",
+  "Solving problems sharpens thinking.",
+  "Short, focused study beats long sessions.",
+  "Your brain grows with learning.",
+  "Asking help is strength.",
+  "Curiosity inspires others.",
+  "New skills make you adaptable.",
+  "Patience matters as much as brains.",
+  "Every book is a conversation with a genius.",
+  "Education is the passport to dreams.",
+  "Knowledge today shapes tomorrow."
+];
+
+export default function HeroSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [index, setIndex] = useState(0);
+  const [factIndex, setFactIndex] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+
+    // Hero images interval
+    const imageInterval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % heroImages.length);
+    }, 8000);
+
+    // Fun Fact interval
+    const factInterval = setInterval(() => {
+      setFactIndex((prev) => (prev + 1) % funFacts.length);
+    }, 9000);
+
+    return () => {
+      clearInterval(imageInterval);
+      clearInterval(factInterval);
+    };
+  }, []);
+
+  return (
+    <section className="relative min-h-[90vh] flex flex-col items-center pt-24">
+      {/* Fun Fact Top Bar */}
+      <div className="w-full bg-green-500 text-white text-sm font-medium text-center py-1 px-2 truncate">
+    {funFacts[factIndex]}
+  </div>
+
+      <div className="absolute inset-0 -z-10 overflow-hidden ">
+        <div className="absolute top-0 right-0 w-full h-[90%] bg-gradient-to-bl from-indigo-500/10 via-green-500/5 to-transparent rounded-bl-[100px] opacity-70" />
+        <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-bl from-indigo-500/10 via-green-500/5 to-transparent rounded-tr-[100px] opacity-70" />
+      </div>
+
+      <div className="container px-4 mx-auto flex-1 flex items-center">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6">
+        <div
+          className={cn(
+            "flex flex-col justify-center transition-all duration-1000 transform",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+            "text-center lg:text-left items-center lg:items-start"
+          )}
+        >
+          <div className="mt-10 lg:mt-6 inline-flex items-center space-x-2 rounded-full px-3 py-1 text-sm bg-primary/10 text-primary mb-6 w-fit mx-auto lg:mx-0">
+            <span>Your Journey to Fluent English Starts Here.</span>
+          </div>
+
+          <h1 className={`${rancho.className} text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-jakarta mb-6 max-w-3xl mx-auto lg:mx-0`}>
+            Learn English online and improve your skills through our high quality <span className="bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">courses <span className="text-black dark:text-white">and</span> resources.</span>
+          </h1>
+
+          <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
+           Everything you find here has been specially created by the Watch to lead.
+          </p>   
+            <div className="flex flex-col sm:flex-row items-center sm:items-start  gap-4 w-full">
+            <Button
+              size="lg"
+              className="group w-full sm:w-auto flex justify-center"
+            >
+              About Us
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Link href="https://www.youtube.com/@watchtoleadenglish">
+            <Button
+              className="relative w-14 h-14 sm:w-20 sm:h-11 rounded-full text-primary shadow-lg flex items-center justify-center group hover:scale-105 transition-transform duration-300"
+              style={{ backgroundColor: "#74a350" }}
+            >
+              <span className="absolute inset-0 rounded-full animate-ping bg-white/20"></span>
+              <svg className="w-6 h-6 sm:w-8 sm:h-8 z-10" fill="white" viewBox="0 0 20 20">
+                <path d="M6 4l10 6-10 6V4z" />
+              </svg>
+            </Button>
+            </Link>
+          </div>
+
+
+            <div className="mt-12 flex items-center space-x-6">
+              <div className="flex -space-x-2">
+                {["JD", "MS", "AK", "TW"].map((name, i) => (
+                  <div
+                    key={i}
+                    className="w-10 h-10 rounded-full bg-muted/80 border-2 border-background flex items-center justify-center text-xs font-medium"
+                  >
+                    {name}
+                  </div>
+                ))}
+              </div>
+              <div>
+                <div className="flex items-center">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <svg
+                      key={star}
+                      className="w-5 h-5 text-yellow-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">4.9/5</span> from 200+ reviews
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className={cn(
+              "hidden relative sm:flex items-center justify-center transition-all duration-1000 transform",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+              "delay-300"
+            )}
+          >
+            <div className="relative w-full aspect-square md:aspect-[4/3] overflow-hidden rounded-2xl border-4 border-[#a5be4b] shadow-[0_0_15px_2px_#39ff14]">
+              {heroImages.map((src, i) => (
+                <Image
+                  key={i}
+                  src={src}
+                  alt={`Slide ${i}`}
+                  fill
+                  priority={i === 0}
+                  className={cn(
+                    "absolute inset-0 object-cover transition-opacity duration-1000",
+                    i === index ? "opacity-100 z-10" : "opacity-0 z-0"
+                  )}
+                />
+              ))}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+
+              {/* Floating Stats Card */}
+              <div className="absolute -bottom-6 -left-6 md:bottom-8 md:left-8 bg-background/80 backdrop-blur-md rounded-lg p-4 z-20 shadow-lg">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-primary/10 rounded-full p-3">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-green-500">
+                      <path d="M21 21H4.6C3.17 21 2 19.83 2 18.4V4" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M21 7L16.03 11.97L11.03 6.97L7.03 10.97L3 6.94" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">Daily Views</p>
+                    <p className="text-2xl font-bold">85%</p>
+                  </div>
+                </div>
+              </div>
+
+           {/* Floating Client Card */}
+              <div className="absolute -top-6 -right-6 md:top-8 md:right-8 bg-background/80 backdrop-blur-md rounded-lg p-4 z-20 shadow-lg">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-indigo-500/10 rounded-full p-3">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-green-500">
+                      <path d="M9.16 10.87C9.06 10.86 8.94 10.86 8.83 10.87C6.45 10.79 4.56 8.84 4.56 6.44C4.56 3.99 6.54 2 9 2C11.45 2 13.44 3.99 13.44 6.44C13.43 8.84 11.54 10.79 9.16 10.87Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M16.41 4C18.35 4 19.91 5.57 19.91 7.5C19.91 9.39 18.41 10.93 16.54 11C16.46 10.99 16.37 10.99 16.28 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M4.16 14.56C1.74 16.18 1.74 18.82 4.16 20.43C6.91 22.27 11.42 22.27 14.17 20.43C16.59 18.81 16.59 16.17 14.17 14.56C11.43 12.73 6.92 12.73 4.16 14.56Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M18.34 20C19.06 19.85 19.74 19.56 20.3 19.13C21.86 17.96 21.86 16.03 20.3 14.86C19.75 14.44 19.08 14.16 18.37 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">Connect with Students</p>
+                    <p className="text-2xl font-bold">4k+</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
