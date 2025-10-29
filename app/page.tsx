@@ -4,7 +4,7 @@ import TestimonialsSection from '@/components/sections/Testimonials';
 import DictionaryCard from '@/components/sections/DictionaryCard';
 import Courses from '@/components/sections/Courses';
 import Bannerteam from '@/components/banners/Bannerteam';
-import Ebooks from '@/components/banners/Ebooks';
+import Ebooks from '@/components/banners/movies';
 
 export default function Home() {
   return (

@@ -152,7 +152,7 @@ export default function SpokenEnglishCourse() {
                       <div className="flex items-start">
                         <div className="w-20 h-20 rounded-full overflow-hidden mr-4">
                           <Image 
-                            src="/Images/courses/coursecreator2.png"
+                            src="/images/courses/coursecreator2.png"
                             alt="Shabana Malik"
                             width={80}
                             height={80}

@@ -86,28 +86,12 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold text-base mb-4">Contact</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <Mail size={16} className="text-primary" /> info@grovancedigital.com
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone size={16} className="text-primary" /> +92 300 1234567
-              </li>
-              <li className="flex items-center gap-2">
-                <MapPin size={16} className="text-primary" /> Karachi, Pakistan
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Bottom Line */}
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground text-center sm:text-left">
-            © {new Date().getFullYear()} Grovance Digital. All rights reserved.
+            © {new Date().getFullYear()} Watch to Lead. All rights reserved.
           </p>
           <div className="text-sm text-muted-foreground">
             Built with ❤️ by <span className="text-foreground font-medium">Hasan Rafay</span>

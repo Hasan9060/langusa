@@ -12,7 +12,7 @@ const teamMembers = [
   {
     name: "Shabana Malik",
     role: "Founder & CEO",
-    image: "/Images/team/shabana.png",
+    image: "/images/team/shabana.png",
     bio: "Former Google marketing strategist with 15+ years of experience in digital marketing.",
     social: {
       twitter: "#",
@@ -24,7 +24,19 @@ const teamMembers = [
   {
     name: "Syed Hasan Rafay",
     role: "SEO Director",
-    image: "/Images/team/hasan.png",
+    image: "/images/team/hasan.png",
+    bio: "SEO expert specializing in technical SEO and content strategy for enterprise clients.",
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      email: "mailto:marcus@digitaledge.com",
+    },
+    achievements: ["SEO Expert", "Enterprise", "Content Strategy"],
+  },
+    {
+    name: "Maryam Malik",
+    role: "SEO Director",
+    image: "/images/team/maryam.png",
     bio: "SEO expert specializing in technical SEO and content strategy for enterprise clients.",
     social: {
       twitter: "#",
@@ -48,7 +60,7 @@ const teamMembers = [
   {
     name: "Annus Mughal",
     role: "Content Strategy",
-    image: "/Images/team/annus.png",
+    image: "/images/team/annus.png",
     bio: "Award-winning content strategist with background in journalism and brand storytelling.",
     social: {
       twitter: "#",
@@ -60,7 +72,7 @@ const teamMembers = [
   {
     name: "Jibreal Malik",
     role: "Graphic Designer",
-    image: "/Images/team/jibreal.png",
+    image: "/images/team/jibreal.png",
     bio: "Award-winning content strategist with background in journalism and brand storytelling.",
     social: {
       twitter: "#",
@@ -72,7 +84,7 @@ const teamMembers = [
     {
     name: "Poonar Ali",
     role: "Graphic Designer",
-    image: "/Images/team/poonar.png",
+    image: "/images/team/poonar.png",
     bio: "Specialized in creating quick responsive websites and efficient functional designs with impressive skills of creativity.",
     social: {
       twitter: "#",
@@ -84,7 +96,7 @@ const teamMembers = [
      {
     name: "Mishal Hussain",
     role: "Graphic Designer",
-    image: "/Images/team/mishal.png",
+    image: "/images/team/mishal.png",
     bio: "Specialized in creating quick responsive websites and efficient functional designs with impressive skills of creativity.",
     social: {
       twitter: "#",
