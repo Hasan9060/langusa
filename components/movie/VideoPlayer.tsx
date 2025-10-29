@@ -129,9 +129,9 @@ export default function VideoPlayer({ video, onClose }: VideoPlayerProps) {
         setIsFullscreen(true);
         
         // Lock orientation to landscape on mobile
-        if (window.screen.orientation && window.screen.orientation.lock) {
+        if ((screen as any).orientation && typeof (screen as any).orientation.lock === 'function') {
           try {
-            await (screen.orientation as any).lock('landscape');
+            await (screen as any).orientation.lock('landscape');
           } catch (e) {
             console.warn('Orientation lock not supported');
           }
@@ -602,7 +602,6 @@ export default function VideoPlayer({ video, onClose }: VideoPlayerProps) {
                       value={volume}
                       onChange={(e) => handleVolumeChange(Number(e.target.value))}
                       className="volume-slider vertical"
-                      orient="vertical"
                     />
                   </div>
                 )}
