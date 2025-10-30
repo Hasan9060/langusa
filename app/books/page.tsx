@@ -151,6 +151,7 @@ export default function BooksLibraryPage() {
     { value: "X", label: "Class X" },
     { value: "XI", label: "Class XI" },
     { value: "XII", label: "Class XII" },
+    { value: "ADS", label: "Class ADS" },
     { value: "Advanced", label: "Advanced" },
   ];
 

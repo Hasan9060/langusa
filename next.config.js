@@ -4,7 +4,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: false,
     domains: ['lh3.googleusercontent.com', 'graph.facebook.com', 'platform-lookaside.fbsbx.com'],
   },
   experimental: {

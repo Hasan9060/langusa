@@ -222,9 +222,6 @@ export default function Header() {
               <Button asChild variant="ghost" size="sm">
                 <Link href="/auth/login">Login</Link>
               </Button>
-              <Button asChild size="sm">
-                <Link href="/auth/signup">Sign Up</Link>
-              </Button>
             </div>
           )}
           
@@ -302,32 +299,43 @@ export default function Header() {
               Home
             </Link>
             {navItems.map((item) => (
-              <div key={item.name} className="flex flex-col">
-                <button
-                  onClick={() => item.submenu ? toggleSubmenu(item.name) : setIsOpen(false)}
-                  className="flex justify-between items-center text-lg font-medium hover:text-primary w-full"
-                >
-                  {item.name}
-                  {item.submenu && (
-                    openSubmenu === item.name ? <ChevronUp size={16} /> : <ChevronDown size={16} />
-                  )}
-                </button>
-                {item.submenu && openSubmenu === item.name && (
-                  <div className="flex flex-col pl-4 mt-1 space-y-1">
-                    {item.submenu.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        href={sub.href}
-                        onClick={() => setIsOpen(false)}
-                        className="text-base font-normal hover:text-primary"
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+  <div key={item.name} className="flex flex-col">
+    {item.submenu ? (
+      <>
+        <button
+          onClick={() => toggleSubmenu(item.name)}
+          className="flex justify-between items-center text-lg font-medium hover:text-primary w-full"
+        >
+          {item.name}
+          {openSubmenu === item.name ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+        </button>
+        {openSubmenu === item.name && (
+          <div className="flex flex-col pl-4 mt-1 space-y-1">
+            {item.submenu.map((sub) => (
+              <Link
+                key={sub.name}
+                href={sub.href}
+                onClick={() => setIsOpen(false)}
+                className="text-base font-normal hover:text-primary"
+              >
+                {sub.name}
+              </Link>
             ))}
+          </div>
+        )}
+      </>
+    ) : (
+      <Link
+        href={item.href ?? "#"}
+        onClick={() => setIsOpen(false)}
+        className="text-lg font-medium hover:text-primary w-full py-2"
+      >
+        {item.name}
+      </Link>
+    )}
+  </div>
+))}
+
             
             {/* Mobile Auth Buttons */}
             {!user ? (

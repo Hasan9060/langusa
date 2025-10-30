@@ -8,7 +8,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import {
   Bot,
   BookOpen,
-  Youtube,
   Library,
   GraduationCap,
   ClipboardCheck,
@@ -30,7 +29,7 @@ const services = [
     bgColor:
       "bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/20",
     borderColor: "border-blue-200/50 dark:border-blue-700/30",
-   link: "https://ai-assisstant-eight.vercel.app/",
+   link: "https://ai-assisstant-ochre.vercel.app/",
   },
   {
     id: 2,
@@ -47,10 +46,10 @@ const services = [
   },
   {
     id: 3,
-    icon: Youtube,
-    title: "YouTube Channel",
+    icon: GraduationCap,
+    title: "Past & Preparation Papers ",
     description:
-      "Watch interactive lessons, pronunciation guides, and vocabulary challenges all completely free.",
+      "Get access to a wide range of past papers and preparation materials.",
     color: "from-red-500 to-orange-500",
     bgColor:
       "bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/30 dark:to-orange-950/20",
@@ -71,18 +70,6 @@ const services = [
   },
   {
     id: 5,
-    icon: GraduationCap,
-    title: "Language Courses",
-    description:
-      "Take structured English courses designed to build confidence and practical communication skills.",
-    color: "from-amber-500 to-yellow-500",
-    bgColor:
-      "bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/30 dark:to-yellow-950/20",
-    borderColor: "border-amber-200/50 dark:border-amber-700/30",
-    link: "/courses/spokenenglish",
-  },
-  {
-    id: 6,
     icon: ClipboardCheck,
     title: "Daily Quizzes",
     description:
@@ -94,7 +81,7 @@ const services = [
     comingSoon: true,
   },
   {
-    id: 7,
+    id: 6,
     icon: Users2,
     title: "Learning Community",
     description:
@@ -141,7 +128,7 @@ export default function ServicesSection() {
           </div>
 
           <h2 className="text-xl sm:text-3xl md:text-4xl font-bold font-jakarta mb-4">
-            Everything You Need to Learn English
+            Everything You Need to Learn!
           </h2>
 
           <p className="text-xs sm:text-lg text-muted-foreground mb-8 leading-relaxed">

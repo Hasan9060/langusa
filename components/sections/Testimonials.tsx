@@ -10,31 +10,27 @@ import { cn } from "@/lib/utils"
 
 const testimonials = [
   {
-    content: "Working with DigitalEdge transformed our online presence. Their strategic approach to SEO and content marketing helped us achieve first-page rankings for our target keywords, resulting in a 210% increase in organic traffic and a significant boost in qualified leads.",
-    author: "Minahil Ahmed",
-    role: "Marketing Director",
-    image: "https://i.pinimg.com/originals/a4/d0/14/a4d0146d7d790328458cc98920d6d3a8.jpg",
+    content: "This platform is brilliant for upskilling on your own schedule. I was looking for a refresher in data analysis fundamentals, and the Watch to Lead course was perfect. I especially loved the weekly live Q&A sessions with the instructors—it was like having a personal tutor without the high cost.",
+    author: "Zain Malik",
+    image: "/images/testimonials/student1.jpeg",
+    rating: 4,
+  },
+  {
+    content: "I enrolled in the 'Creative Writing for Beginners' series, and it has genuinely sparked my passion again. The videos are high-quality, and the assignments are engaging. The best part is the active and supportive community forum where I could share my work and get constructive criticism from fellow learners. A fantastic, supportive environment!",
+    author: "Fatima Javed",
+    image: "/images/testimonials/student2.jpeg",
     rating: 5,
   },
   {
-    content: "The team at DigitalEdge are true professionals. Their data-driven approach to PPC campaigns reduced our cost per acquisition by 42% while increasing conversion rates. The detailed reporting and insights they provide have been invaluable for our business growth strategy.",
-    author: "Hammad Khan",
-    role: "CEO, TechSolutions",
-    image: "https://images.pexels.com/photos/16452330/pexels-photo-16452330.jpeg?cs=srgb&dl=pexels-abrar-afzal-521335169-16452330.jpg&fm=jpg",
-    rating: 5,
-  },
-  {
-    content: "As a small business owner, I was skeptical about digital marketing. DigitalEdge changed my perspective completely. Their local SEO strategies helped us dominate our market, and their social media campaigns have built a loyal community around our brand. Highly recommended!",
+    content: "The Speaking course was a game changer. I used to dread presentations, but now I feel confident and articulate. The most valuable part was the one-on-one personalized feedback on my practice speeches. Highly recommend for anyone looking to truly overcome stage fright",
     author: "Arsh",
-    role: "Business Owner",
     image: "https://cdn.pixabay.com/photo/2021/04/11/05/50/boy-6168779_1280.jpg",
-    rating: 5,
+    rating: 3,
   },
   {
-    content: "DigitalEdge has been an essential partner in our digital transformation. Their email marketing campaigns have consistently delivered a 4x ROI, and their content strategy has positioned us as thought leaders in our industry. They truly understand our business goals.",
+    content: "I have done English course though watch to lead & literally I can really speak English so well and frequently.one of the best feature I like the most about daily vocalbury words . Thank you so much WTL for this amazing platform.",
     author: "Ayesha Asif",
-    role: "Product Manager",
-    image: "https://i.pinimg.com/originals/a4/d0/14/a4d0146d7d790328458cc98920d6d3a8.jpg",
+    image: "/images/testimonials/student3.jpeg",
     rating: 5,
   },
 ]
@@ -201,7 +197,7 @@ export default function TestimonialsSection() {
 
                       {/* Testimonial Text */}
                       <p className="text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8 font-medium">
-                        "{testimonials[activeIndex].content}"
+                        {testimonials[activeIndex].content}
                       </p>
 
                       {/* Author Info */}
@@ -211,7 +207,7 @@ export default function TestimonialsSection() {
                             {testimonials[activeIndex].author}
                           </p>
                           <p className="text-sm text-muted-foreground">
-                            {testimonials[activeIndex].role}
+                            Student
                           </p>
                         </div>
                       </div>
@@ -230,7 +226,7 @@ export default function TestimonialsSection() {
                             className={cn(
                               "w-3 h-3 rounded-full transition-all duration-300",
                               index === activeIndex 
-                                ? "bg-gradient-to-r from-blue-500 to-purple-500 scale-125" 
+                                ? "bg-gradient-to-r from-green-500 to-green-500 scale-125" 
                                 : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400"
                             )}
                           />
@@ -306,7 +302,7 @@ export default function TestimonialsSection() {
                               {testimonials[activeIndex].author}
                             </p>
                             <p className="text-sm text-muted-foreground">
-                              {testimonials[activeIndex].role}
+                              Student
                             </p>
                             <div className="flex gap-1 mt-1">
                               {[...Array(5)].map((_, i) => (
