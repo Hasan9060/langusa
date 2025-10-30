@@ -12,7 +12,7 @@ const teamMembers = [
   {
     name: "Shabana Malik",
     role: "Founder & CEO",
-    image: "/images/team/shabana.png",
+    image: "/Images/team/shabana.png",
     bio: "Former Google marketing strategist with 15+ years of experience in digital marketing.",
     social: {
       twitter: "#",
@@ -24,7 +24,7 @@ const teamMembers = [
   {
     name: "Syed Hasan Rafay",
     role: "SEO Director",
-    image: "/images/team/hasan.png",
+    image: "/Images/team/hasan.png",
     bio: "SEO expert specializing in technical SEO and content strategy for enterprise clients.",
     social: {
       twitter: "#",
@@ -36,7 +36,7 @@ const teamMembers = [
     {
     name: "Maryam Malik",
     role: "SEO Director",
-    image: "/images/team/maryam.png",
+    image: "/Images/team/maryam.png",
     bio: "SEO expert specializing in technical SEO and content strategy for enterprise clients.",
     social: {
       twitter: "#",
@@ -48,7 +48,7 @@ const teamMembers = [
   {
     name: "Benazir Abbasi",
     role: "Content Writer & Developer",
-    image: "/images/team/benazir.png",
+    image: "/Images/team/benazir.png",
     bio: "Certified Google Ads expert managing over $5M in ad spend for high-growth companies.",
     social: {
       twitter: "#",
@@ -60,7 +60,7 @@ const teamMembers = [
   {
     name: "Annus Mughal",
     role: "Content Strategy",
-    image: "/images/team/annus.png",
+    image: "/Images/team/annus.png",
     bio: "Award-winning content strategist with background in journalism and brand storytelling.",
     social: {
       twitter: "#",
@@ -72,7 +72,7 @@ const teamMembers = [
   {
     name: "Jibreal Malik",
     role: "Graphic Designer",
-    image: "/images/team/jibreal.png",
+    image: "/Images/team/jibreal.png",
     bio: "Award-winning content strategist with background in journalism and brand storytelling.",
     social: {
       twitter: "#",
@@ -84,7 +84,7 @@ const teamMembers = [
     {
     name: "Poonar Ali",
     role: "Graphic Designer",
-    image: "/images/team/poonar.png",
+    image: "/Images/team/poonar.png",
     bio: "Specialized in creating quick responsive websites and efficient functional designs with impressive skills of creativity.",
     social: {
       twitter: "#",
@@ -96,7 +96,7 @@ const teamMembers = [
      {
     name: "Mishal Hussain",
     role: "Graphic Designer",
-    image: "/images/team/mishal.png",
+    image: "/Images/team/mishal.png",
     bio: "Specialized in creating quick responsive websites and efficient functional designs with impressive skills of creativity.",
     social: {
       twitter: "#",
