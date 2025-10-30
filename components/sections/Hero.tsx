@@ -13,7 +13,7 @@ const rancho = Rancho({
   subsets: ["latin"],
 });
 
-const heroImages = ["/images/hero/hero-image.png"];
+const heroImages = ["/Images/hero/hero-image.png"];
 
 const funFacts = [
   "Small steps lead to mastery.",

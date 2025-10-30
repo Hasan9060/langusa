@@ -12,13 +12,13 @@ const testimonials = [
   {
     content: "This platform is brilliant for upskilling on your own schedule. I was looking for a refresher in data analysis fundamentals, and the Watch to Lead course was perfect. I especially loved the weekly live Q&A sessions with the instructors—it was like having a personal tutor without the high cost.",
     author: "Zain Malik",
-    image: "/images/testimonials/student1.jpeg",
+    image: "/Images/testimonials/student1.jpeg",
     rating: 4,
   },
   {
     content: "I enrolled in the 'Creative Writing for Beginners' series, and it has genuinely sparked my passion again. The videos are high-quality, and the assignments are engaging. The best part is the active and supportive community forum where I could share my work and get constructive criticism from fellow learners. A fantastic, supportive environment!",
     author: "Fatima Javed",
-    image: "/images/testimonials/student2.jpeg",
+    image: "/Images/testimonials/student2.jpeg",
     rating: 5,
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
   {
     content: "I have done English course though watch to lead & literally I can really speak English so well and frequently.one of the best feature I like the most about daily vocalbury words . Thank you so much WTL for this amazing platform.",
     author: "Ayesha Asif",
-    image: "/images/testimonials/student3.jpeg",
+    image: "/Images/testimonials/student3.jpeg",
     rating: 5,
   },
 ]

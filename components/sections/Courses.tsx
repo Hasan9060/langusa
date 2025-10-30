@@ -22,7 +22,7 @@ const courses = [
   {
     title: "English Language Course",
     description: "Enhance your English skills with our comprehensive language course designed for all levels.",
-    image: "/images/courses/course1.png",
+    image: "/Images/courses/course1.png",
     link: "/courses/spokenenglish",
     level: "Beginner",
     duration: "8 weeks",
@@ -35,7 +35,7 @@ const courses = [
   {
     title: "Python Programming Course",
     description: "Learn Python from scratch and build real-world applications with hands-on projects.",
-    image: "/images/courses/course2.png",
+    image: "/Images/courses/course2.png",
     link: "/courses/pythonprogramming",
     level: "Intermediate",
     duration: "10 weeks",
@@ -48,7 +48,7 @@ const courses = [
   {
     title: "Website Development (Full-Stack)",
     description: "Master full-stack web development with modern technologies and real-world projects.",
-    image: "/images/courses/course3.png",
+    image: "/Images/courses/course3.png",
     link: "/courses/books",
     level: "Advanced",
     duration: "12 weeks",
@@ -61,7 +61,7 @@ const courses = [
   {
     title: "UI/UX Design Course",
     description: "Design beautiful interfaces and amazing user experiences with industry-standard tools.",
-    image: "/images/courses/course4.png",
+    image: "/Images/courses/course4.png",
     link: "/courses/uiux",
     level: "Beginner",
     duration: "6 weeks",
@@ -74,7 +74,7 @@ const courses = [
   {
     title: "Agentic AI Course",
     description: "Explore the world of Agentic AI and build intelligent applications with cutting-edge technology.",
-    image: "/images/courses/course5.jpeg",
+    image: "/Images/courses/course5.jpeg",
     link: "/courses/quizzes",
     level: "Advanced",
     duration: "14 weeks",
