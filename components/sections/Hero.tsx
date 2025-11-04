@@ -42,13 +42,13 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center pt-24 overflow-hidden">
-      {/* Floating yellow dots background */}
+      {/* Floating background dots */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         {Array.from({ length: 15 }).map((_, i) => (
           <div
             key={i}
             className={cn(
-              "absolute w-3 h-3 bg-pink-600 dark:bg-yellow-600 rounded-full opacity-90 blur-sm animate-float",
+              "absolute w-3 h-3 bg-pink-600 dark:bg-yellow-600 rounded-full opacity-80 blur-sm animate-float",
               i % 3 === 0 && "w-4 h-4 opacity-40",
               i % 5 === 0 && "opacity-50 blur-md"
             )}
@@ -60,20 +60,26 @@ export default function HeroSection() {
             }}
           />
         ))}
-        {/* Gradient background */}
+
+        {/* Gradient overlays */}
         <div className="absolute top-0 right-0 w-full h-[90%] bg-gradient-to-bl from-indigo-500/10 via-green-500/5 to-transparent rounded-bl-[100px]" />
         <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-bl from-indigo-500/10 via-green-500/5 to-transparent rounded-tr-[100px]" />
       </div>
 
-      {/* Fun Fact Top Bar */}
-      <div className="w-full bg-green-500 text-white text-sm font-medium text-center py-1 px-2 truncate">
+      {/* Release bar */}
+      <div className="w-full bg-red-700 text-white text-sm font-medium text-center py-1 px-2 truncate">
+       Version 1.0 was launched! — Version 2.0 is on the way!
+      </div>
+
+      {/* Fun fact bar */}
+      <div className="w-full bg-green-500 text-white text-sm font-medium text-center py-1 px-2 truncate transition-all">
         {funFacts[factIndex]}
       </div>
 
       {/* Main container */}
       <div className="container px-4 mx-auto flex-1 flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6">
-          {/* Left Section */}
+          {/* Left section */}
           <div
             className={cn(
               "flex flex-col justify-center transition-all duration-1000 transform",
@@ -90,32 +96,44 @@ export default function HeroSection() {
             >
               Learn English online and improve your skills through our high-quality{" "}
               <span className="bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">
-                courses <span className="text-black dark:text-white">and</span> resources.
+                courses{" "}
+                <span className="text-black dark:text-white">and</span> resources.
               </span>
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              Everything you find here has been specially created by the Watch to Lead.
+              Everything you find here has been specially created by Watch to Lead.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 w-full">
-              <Button size="lg" className="group w-full sm:w-auto flex justify-center">
-                About Us
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Link href="https://www.youtube.com/@watchtoleadenglish">
+              <Link href="/about">
+                <Button
+                  size="lg"
+                  className="group w-full sm:w-auto flex justify-center items-center"
+                >
+                  About Us
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+
+              <Link href="https://www.youtube.com/@watchtoleadenglish" target="_blank">
                 <Button
                   className="relative w-14 h-14 sm:w-20 sm:h-11 rounded-full text-primary shadow-lg flex items-center justify-center group hover:scale-105 transition-transform duration-300"
                   style={{ backgroundColor: "#74a350" }}
                 >
                   <span className="absolute inset-0 rounded-full animate-ping bg-white/20"></span>
-                  <svg className="w-6 h-6 sm:w-8 sm:h-8 z-10" fill="white" viewBox="0 0 20 20">
+                  <svg
+                    className="w-6 h-6 sm:w-8 sm:h-8 z-10"
+                    fill="white"
+                    viewBox="0 0 20 20"
+                  >
                     <path d="M6 4l10 6-10 6V4z" />
                   </svg>
                 </Button>
               </Link>
             </div>
 
+            {/* Reviews */}
             <div className="mt-12 flex items-center space-x-6">
               <div className="flex -space-x-2">
                 {["JD", "MS", "AK", "TW"].map((name, i) => (
@@ -147,10 +165,11 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Image Section */}
+          {/* Right image section */}
           <div
             className={cn(
-              "hidden relative sm:flex items-center justify-center transition-all duration-1000 transform"
+              "hidden relative sm:flex items-center justify-center transition-all duration-1000 transform",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             )}
           >
             <div className="relative w-full md:aspect-[4/3]">
@@ -161,12 +180,12 @@ export default function HeroSection() {
                   alt={`Slide ${i}`}
                   fill
                   priority={i === 0}
-                  className="absolute inset-0 object-contain transition-opacity duration-1000"
+                  className="object-contain transition-opacity duration-1000"
                 />
               ))}
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
 
-              {/* Floating Client Card */}
+              {/* Floating info card */}
               <div className="absolute -bottom-6 -left-6 md:bottom-8 md:left-8 bg-background/80 backdrop-blur-md rounded-lg p-4 z-20 shadow-lg">
                 <div className="flex items-center space-x-4">
                   <div className="bg-indigo-500/10 rounded-full p-3">
@@ -207,4 +226,3 @@ export default function HeroSection() {
     </section>
   );
 }
-

@@ -34,8 +34,8 @@ const navItems: NavItem[] = [
     name: 'More', 
     submenu: [
       { name: 'Team', href: '/team' },
-      { name: 'About Us', href: '/about/our-story' },
-      { name: 'Contact Us', href: '/about/mission' },
+      { name: 'About Us', href: '/aboutus' },
+      { name: 'Contact Us', href: 'https://wa.me/923161941733?text=Assalamualaikum!' },
     ] 
   },
 ]

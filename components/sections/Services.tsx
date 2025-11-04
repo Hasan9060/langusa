@@ -11,8 +11,10 @@ import {
   Library,
   GraduationCap,
   ClipboardCheck,
+  Gamepad2,
   Users2,
   Rocket,
+  Notebook,
   ArrowRight,
   Sparkles as SparklesIcon,
 } from "lucide-react"
@@ -33,6 +35,18 @@ const services = [
   },
   {
     id: 2,
+    icon: Library,
+    title: "eBooks",
+    description:
+      "Access our growing library of e-books and PDFs to improve your reading and grammar skills.",
+    color: "from-emerald-500 to-green-500",
+    bgColor:
+      "bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/20",
+    borderColor: "border-emerald-200/50 dark:border-emerald-700/30",
+    link: "/books",
+  },
+  {
+    id: 3,
     icon: BookOpen,
     title: "Vocabulary Builder",
     description:
@@ -45,7 +59,7 @@ const services = [
     link: "/vocabulary",
   },
   {
-    id: 3,
+    id: 4,
     icon: GraduationCap,
     title: "Past & Preparation Papers ",
     description:
@@ -55,18 +69,7 @@ const services = [
       "bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/30 dark:to-orange-950/20",
     borderColor: "border-red-200/50 dark:border-red-700/30",
     link: "https://www.youtube.com/@watchtoleadenglish",
-  },
-  {
-    id: 4,
-    icon: Library,
-    title: "eBooks",
-    description:
-      "Access our growing library of e-books and PDFs to improve your reading and grammar skills.",
-    color: "from-emerald-500 to-green-500",
-    bgColor:
-      "bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/20",
-    borderColor: "border-emerald-200/50 dark:border-emerald-700/30",
-    link: "/books",
+    comingSoon: true,
   },
   {
     id: 5,
@@ -93,13 +96,39 @@ const services = [
     comingSoon: true,
     link: "/community",
   },
+   {
+    id: 7,
+    icon: Notebook,
+    title: "Notes & Guess Papers",
+    description:
+      "All subject notes and guess papers to aid your exam preparation.",
+    color: "from-blue-500 to-red-500",
+    bgColor:
+      "bg-gradient-to-br from-purple-50 to-purple-50 dark:from-purple-950/30 dark:to-purple-950/20",
+    borderColor: "border-red-200/50 dark:border-red-700/30",
+    link: "https://www.youtube.com/@watchtoleadenglish",
+    comingSoon: true,
+  },
+   {
+    id: 8,
+    icon:  Gamepad2,
+    title: "Games & Activities",
+    description:
+      "Get access to a wide range of past papers and preparation materials.",
+    color: "from-green-500 to-pink-500",
+    bgColor:
+      "bg-gradient-to-br from-amber-50 to-amber-50 dark:from-amber-950/30 dark:to-amber-950/20",
+    borderColor: "border-red-200/50 dark:border-red-700/30",
+    link: "https://www.youtube.com/@watchtoleadenglish",
+    comingSoon: true,
+  },
 ]
 
 export default function ServicesSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [showAll, setShowAll] = useState(false)
-  const visibleServices = showAll ? services : services.slice(0, 4)
+  const visibleServices = showAll ? services : services.slice(0, 3)
 
   return (
     <section id="services" className="py-24 relative overflow-hidden bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:20px_20px] dark:bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_1px)] dark:bg-black">
@@ -142,7 +171,7 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -244,7 +273,7 @@ export default function ServicesSection() {
             className="relative overflow-hidden group bg-gradient-to-r from-green-600 to-green-600 text-white font-semibold py-6 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0"
           >
             <Rocket className="mr-2 h-5 w-5 group-hover:rotate-45 transition-transform duration-300" />
-            {showAll ? "Show Less" : "Discover All Features"}
+            {showAll ? "Show Less" : "Explore All Features"}
             <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
           </Button>
         </motion.div>

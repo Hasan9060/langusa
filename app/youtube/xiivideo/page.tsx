@@ -7,64 +7,112 @@ import { PlayCircle, ChevronDown, ChevronUp } from "lucide-react";
 const playlist = [
   {
     type: "Chapter",
-    chapter: "Chapter 1: The devoted friend",
+    chapter: "Twenty minutes with Mrs. Oakentubb",
+    videos: [{ title: "Explanation of Chapter", videoId: "IHeJEdQ3Eq4" }],
+  },
+  {
+    type: "Chapter",
+    chapter: "Conquest of Happiness",
+    videos: [{ title: "Explanation to Chapter", videoId: "3ryRqB8DipE&t=13s" }],
+  },
+  {
+    type: "Poem",
+    poem: "The Man of Life Upright",
+    videos: [{ title: "Explanation", videoId: "cFsEZyphU-M" }],
+  },
+  {
+    type: "Poem",
+    poem: "Lines from Samson Agonistes",
+    videos: [{ title: "Explanation", videoId: "m2S257cp5qc" }],
+  },
+  {
+    type: "Poem",
+    poem: "Lines from an Essay on Man",
+    videos: [{ title: "Explanation", videoId: "WOKHiketQpudSml6" }],
+  },
+  {
+    type: "Poem",
+    poem: "Lines from Endymion",
+    videos: [{ title: "Explanation", videoId: "5WBXuOB91hDdLGXr" }],
+  },
+  {
+    type: "Poem",
+    poem: "Lines from Ulysses",
+    videos: [{ title: "Explanation with Urdu Summary", videoId: "kdwhUFlMicHNDdUs" }],
+  },
+  {
+    type: "Prose",
+    prose: "Reflections on the Re-awakening East",
     videos: [
-       { title: " summary, themes, comprehension ", videoId: "u8t7WNlkzw8" },
-        { title: "summary, themes, comprehension", videoId: "LxXY6DdDN4Q" },
-        { title: "summary, themes, comprehension", videoId: "bVk6aU3EQsg" },
-        { title: " Question/Answers", videoId: "XCBdCIjdgfQ" },
+      { title: "Explained in detail Part 1", videoId: "sciz54NlGQU" },
+      { title: "Explained in detail Part 2", videoId: "yntiiOJGq3Y" },
+    ],
+  },
+  {
+    type: "Prose",
+    prose: "Pakistan and the Modern World",
+    videos: [
+      { title: "Explanation Part 1", videoId: "anzdjCu6CMM" },
+      { title: "Explanation Part 2", videoId: "Y-PudhshiYM" },
+      { title: "Full Explanation Part 3", videoId: "t314PWYS2n8" },
+    ],
+  },
+   {
+    type: "Poem",
+    prose: "The Solitary Reaper” by William Wordsworth",
+    videos: [
+      { title: "Explanation", videoId: "U1WhebJiVy8" },
     ],
   },
   {
     type: "Chapter",
-    chapter: "Chapter 2: I Have A Dream",
+    chapter: "I Have A Dream",
     videos: [
-      { title: " A brief Introduction", videoId: "ybYrfQpDeRY" },
-        { title: " English titles and Urdu translation ", videoId: "VnzAvfwZN9o" },
-        { title: "Q/A", videoId: "gzzZ6fbHy7I" },
+      { title: "A Brief Introduction", videoId: "ybYrfQpDeRY" },
+      { title: "English Titles and Urdu Translation", videoId: "VnzAvfwZN9o" },
+      { title: "Q/A", videoId: "gzzZ6fbHy7I" },
     ],
   },
-  // {
-  //   type: "Poem",
-  //   poem: "Poem: The Abbot of Canterbury",
-  //   videos: [
-  //     { title: "An animated explanation", videoId: "2Fj97Pwq0Uc" },
-  //   ],
-  // },
-  // {
-  //   type: "Prose",
-  //   prose: "Prose: Upon Westminster Bridge",
-  //   videos: [
-  //        {title:" solved exercises" ,videoId:"5tRYiYF_W6g"},
-  //   ], // Empty section
-  // },
 ];
 
 export default function YouTubePlaylistPage() {
   const [activeType, setActiveType] = useState("Chapter");
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const filteredPlaylist = playlist.filter(item => item.type === activeType);
+  const filteredPlaylist = playlist.filter((item) => item.type === activeType);
 
   return (
-   <div className="pt-24 min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="pt-24 min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Banner Section */}
-      <div className="relative w-full h-60 sm:h-72 flex items-center justify-center" style={{ backgroundImage: 'url(/Images/xiibanner.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-  <div className="absolute inset-0 bg-black/30" />
-  <div className="relative z-10 text-center text-white px-4">
-    <h1 className="text-3xl sm:text-4xl font-bold mb-2">XII Video Playlist</h1>
-    <p className="text-sm sm:text-base text-gray-200">
-      A curated collection of educational videos for Class XII students Karachi Board.
-    </p>
-  </div>
-</div>
+      <div
+        className="relative w-full h-60 sm:h-72 flex items-center justify-center"
+        style={{
+          backgroundImage: "url(/Images/xiibanner.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-2">
+            XII Video Playlist
+          </h1>
+          <p className="text-sm sm:text-base text-gray-200">
+            A curated collection of educational videos for Class XII students
+            (Karachi Board).
+          </p>
+        </div>
+      </div>
 
       {/* Type Buttons */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 flex flex-wrap gap-3 justify-center">
-        {["Chapter", "Poem", "Prose"].map(type => (
+        {["Chapter", "Poem", "Prose"].map((type) => (
           <button
             key={type}
-            onClick={() => { setActiveType(type); setOpenIndex(null); }}
+            onClick={() => {
+              setActiveType(type);
+              setOpenIndex(null);
+            }}
             className={`px-6 py-2 rounded-xl font-semibold transition-colors ${
               activeType === type
                 ? "bg-green-600 text-white"
@@ -79,8 +127,8 @@ export default function YouTubePlaylistPage() {
       {/* Sections */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 flex flex-col gap-4">
         {filteredPlaylist.map((item, index) => {
-          const title = item.chapter; 
-          // || item.poem || item.prose;
+          const title = item.chapter || item.poem || item.prose;
+
           return (
             <div
               key={index}
@@ -103,7 +151,9 @@ export default function YouTubePlaylistPage() {
               {openIndex === index && (
                 <div className="divide-y divide-gray-200 dark:divide-gray-700 max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-green-400 scrollbar-track-transparent">
                   {item.videos.length > 0 ? (
-                    item.videos.map((video: any, i: number) => <VideoItem key={i} video={video} />)
+                    item.videos.map((video, i) => (
+                      <VideoItem key={i} video={video} />
+                    ))
                   ) : (
                     <div className="p-6 text-center text-gray-500 dark:text-gray-400">
                       No videos available for this section.
@@ -119,8 +169,8 @@ export default function YouTubePlaylistPage() {
   );
 }
 
-function VideoItem({ video }: { video: any }) {
-  const videoId = video.videoId || video.videoid;
+function VideoItem({ video }: { video: { title: string; videoId: string } }) {
+  const videoId = video.videoId;
   if (!videoId) return null;
 
   return (
@@ -145,7 +195,9 @@ function VideoItem({ video }: { video: any }) {
         <h3 className="font-medium text-gray-800 dark:text-gray-100 text-sm sm:text-base">
           {video.title}
         </h3>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Watch on YouTube</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          Watch on YouTube
+        </p>
       </div>
     </a>
   );

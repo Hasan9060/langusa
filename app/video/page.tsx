@@ -28,13 +28,13 @@ export default function CinemaPro() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <div className="pt-24 min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <section className="mb-12 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-green-400 to-blue-400 bg-clip-text text-transparent">
-            Learn English Through Cinema
+            Learn English Through Movies
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Master real-world English with authentic movie scenes and professional lessons

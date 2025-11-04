@@ -13,7 +13,7 @@ const teamMembers = [
     name: "Shabana Malik",
     role: "Founder & CEO",
     image: "/Images/team/shabana.png",
-    bio: "Former Google marketing strategist with 15+ years of experience in digital marketing.",
+    bio: "English teacher & content creator, helping students learn with engaging lessons.",
     social: {
       twitter: "#",
       linkedin: "#",
@@ -23,21 +23,21 @@ const teamMembers = [
   },
   {
     name: "Syed Hasan Rafay",
-    role: "SEO Director",
+    role: "Digital Head & Developer",
     image: "/Images/team/hasan.png",
-    bio: "SEO expert specializing in technical SEO and content strategy for enterprise clients.",
+    bio: "Oversees all digital operations and development at Agentic AI. Making things happen online.",
     social: {
       twitter: "#",
-      linkedin: "#",
-      email: "mailto:marcus@digitaledge.com",
+      linkedin: "https://www.linkedin.com/in/hasanrafay",
+      email: "mailto:hasanrafay2006@gmail.com",
     },
-    achievements: ["SEO Expert", "Enterprise", "Content Strategy"],
+    achievements: ["Agentic AI", "Enterprise", "Content Strategy"],
   },
-    {
+  {
     name: "Maryam Malik",
     role: "SEO Director",
     image: "/Images/team/maryam.png",
-    bio: "SEO expert specializing in technical SEO and content strategy for enterprise clients.",
+    bio: "Technical SEO and content strategy expert helping brands grow through data-driven optimization.",
     social: {
       twitter: "#",
       linkedin: "#",
@@ -49,63 +49,64 @@ const teamMembers = [
     name: "Benazir Abbasi",
     role: "Content Writer & Developer",
     image: "/Images/team/benazir.png",
-    bio: "Certified Google Ads expert managing over $5M in ad spend for high-growth companies.",
+    bio: "Content Writer and Developer who blends storytelling with code to create meaningful digital experiences.",
     social: {
-      twitter: "#",
-      linkedin: "#",
+      facebook: "https://www.facebook.com/fetchandflourish",
+      linkedin: "https://www.linkedin.com/in/benazir-abbasi-ab5112283/",
       email: "mailto:sarah@digitaledge.com",
     },
-    achievements: ["Content Writer", "Development", "High-Growth"],
+    achievements: ["Front-End Developer", "Digital Marketer", "High-Growth"],
   },
   {
     name: "Annus Mughal",
-    role: "Content Strategy",
+    role: "Web Developer",
     image: "/Images/team/annus.png",
-    bio: "Award-winning content strategist with background in journalism and brand storytelling.",
+    bio: "Web Developer skilled in HTML, CSS, JavaScript, and Python, focused on building clean and responsive websites.",
     social: {
-      twitter: "#",
-      linkedin: "#",
+      facebook: "https://www.facebook.com/annus.mughal.92?mibextid=ZbWKwL",
+      linkedin: "https://www.linkedin.com/in/annus-mughal-703324325/",
       email: "mailto:david@digitaledge.com",
     },
-    achievements: ["Award-Winning", "Journalism", "Brand Storytelling"],
+    achievements: ["Full Stack Developer", "School Website", "International Projects"],
   },
   {
     name: "Jibreal Malik",
-    role: "Graphic Designer",
+    role: "Graphic & Video Editor",
     image: "/Images/team/jibreal.png",
-    bio: "Award-winning content strategist with background in journalism and brand storytelling.",
+    bio: "Creative Graphic and Video Editor passionate about visual storytelling and delivering engaging content.",
     social: {
       twitter: "#",
       linkedin: "#",
       email: "mailto:david@digitaledge.com",
     },
-    achievements: ["Award-Winning", "Journalism", "Brand Storytelling"],
+    achievements: ["Graphic Designer", "Content Writer", "Video Editor"],
   },
-    {
+  {
     name: "Poonar Ali",
-    role: "Graphic Designer",
+    role: "Web Developer",
     image: "/Images/team/poonar.png",
-    bio: "Specialized in creating quick responsive websites and efficient functional designs with impressive skills of creativity.",
+    bio: "Web Developer specialized in responsive design and functional digital experiences with creative precision.",
     social: {
-      twitter: "#",
-      linkedin: "#",
-      email: "mailto:david@digitaledge.com",
+      twitter: "https://x.com/PonaarAli?t=KRKQ9hSSwDt3LfVSI4balw&s=08",
+      linkedin: "https://www.linkedin.com/in/ponaar-ali-0b3879291",
+      email: "mailto:ponaarali@gmail.com",
     },
-    achievements: ["Award-Winning", "Journalism", "Brand Storytelling"],
+    achievements: ["Responsive Design", "Web Development", "Brand Storytelling"],
   },
-     {
+  {
     name: "Mishal Hussain",
     role: "Graphic Designer",
     image: "/Images/team/mishal.png",
-    bio: "Specialized in creating quick responsive websites and efficient functional designs with impressive skills of creativity.",
+    bio: "Graphic Designer focused on creating visually appealing and user-centered web designs.",
     social: {
       twitter: "#",
       linkedin: "#",
-      email: "mailto:david@digitaledge.com",
+      email: "mailto:mishal.hussain265@gmail.com",
     },
-    achievements: ["Award-Winning", "Journalism", "Brand Storytelling"],
+    achievements: ["Web Projects", "Theme Designs", "Page Development"],
   },
-]
+];
+
 
 // Helper to create slug
 const createSlug = (name: string) => name.toLowerCase().replace(/ /g, "-")
@@ -117,7 +118,7 @@ export default function Team() {
   return (
 <>
     {/* Hero Section */}
-      <section className="relative pt-28 pb-28 md:pt-40 md:pb-36 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 dark:from-slate-900 dark:via-slate-800 dark:to-black overflow-hidden">
+      <section className="relative pt-28 pb-28 md:pt-40 md:pb-36 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 dark:from-slate-900 dark:via-green-800 dark:to-black overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
