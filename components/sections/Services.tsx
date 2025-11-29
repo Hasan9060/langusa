@@ -55,7 +55,6 @@ const services = [
     bgColor:
       "bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/20",
     borderColor: "border-purple-200/50 dark:border-purple-700/30",
-    comingSoon: true,
     link: "/vocabulary",
   },
   {
