@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import BackToTop from "@/components/ui/BackToTop";
 import YoutubeButton from "@/components/ui/YoutubeButton";
 import SplashScreen from "@/components/ui/SplashScreen";
+import InstallPrompt from "@/components/ui/InstallPrompt";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -58,6 +59,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  manifest: '/manifest.json',
   robots: {
     index: true,
     follow: true,
@@ -93,6 +95,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
         <SplashScreen />
+        <InstallPrompt />
         <BackToTop />
       </body>
     </html>

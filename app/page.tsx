@@ -13,8 +13,8 @@ export default function Home() {
       <ServicesSection />
       <DictionaryCard />
       <Courses />
-      <Ebooks/>
-      <Bannerteam/>
+      <Ebooks />
+      <Bannerteam />
       <TestimonialsSection />
     </>
   );
