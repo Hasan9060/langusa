@@ -57,6 +57,18 @@ const services = [
     borderColor: "border-purple-200/50 dark:border-purple-700/30",
     link: "/vocabulary",
   },
+    {
+    id: 8,
+    icon:  Gamepad2,
+    title: "Games & Activities",
+    description:
+      "Get access to a wide range of past papers and preparation materials.",
+    color: "from-green-500 to-pink-500",
+    bgColor:
+      "bg-gradient-to-br from-amber-50 to-amber-50 dark:from-amber-950/30 dark:to-amber-950/20",
+    borderColor: "border-red-200/50 dark:border-red-700/30",
+    link: "/games",
+  },
   {
     id: 4,
     icon: GraduationCap,
@@ -104,19 +116,6 @@ const services = [
     color: "from-blue-500 to-red-500",
     bgColor:
       "bg-gradient-to-br from-purple-50 to-purple-50 dark:from-purple-950/30 dark:to-purple-950/20",
-    borderColor: "border-red-200/50 dark:border-red-700/30",
-    link: "https://www.youtube.com/@watchtoleadenglish",
-    comingSoon: true,
-  },
-   {
-    id: 8,
-    icon:  Gamepad2,
-    title: "Games & Activities",
-    description:
-      "Get access to a wide range of past papers and preparation materials.",
-    color: "from-green-500 to-pink-500",
-    bgColor:
-      "bg-gradient-to-br from-amber-50 to-amber-50 dark:from-amber-950/30 dark:to-amber-950/20",
     borderColor: "border-red-200/50 dark:border-red-700/30",
     link: "https://www.youtube.com/@watchtoleadenglish",
     comingSoon: true,

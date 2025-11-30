@@ -68,7 +68,7 @@ export default function HeroSection() {
 
       {/* Release bar */}
       <div className="w-full bg-red-700 text-white text-sm font-medium text-center py-1 px-2 truncate">
-       Version 1.0 was launched! — Version 2.0 is on the way!
+       Version 2.0 was launched! — Version 3.0 is on the way!
       </div>
 
       {/* Fun fact bar */}

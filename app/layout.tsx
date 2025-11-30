@@ -7,7 +7,7 @@ import Footer from '@/components/layout/Footer';
 import BackToTop from "@/components/ui/BackToTop";
 import YoutubeButton from "@/components/ui/YoutubeButton";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
 });
@@ -20,12 +20,54 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Watch to Lead - Learn English with Free Resources',
+  metadataBase: new URL('https://watchtolead.com'),
+  title: {
+    default: 'Watch to Lead - Learn English with Free Resources',
+    template: '%s | Watch to Lead',
+  },
   description: 'Watch to Lead offers free English learning resources including vocabulary builders, YouTube lessons, e-books, and quizzes to help you achieve fluency.',
+  keywords: ['English learning', 'vocabulary builder', 'grammar tips', 'educational games', 'free english resources', 'watch to lead', 'IELTS preparation'],
+  authors: [{ name: 'Hasan Rafay' }],
+  creator: 'Hasan Rafay',
+  publisher: 'Watch to Lead',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://watchtolead.com',
+    title: 'Watch to Lead - Learn English with Free Resources',
+    description: 'Master English with our free interactive tools, games, and comprehensive lessons.',
+    siteName: 'Watch to Lead',
+    images: [
+      {
+        url: '/Images/og-image.png', // We should ensure this exists or use a logo
+        width: 1200,
+        height: 630,
+        alt: 'Watch to Lead - English Learning Platform',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Watch to Lead - Learn English with Free Resources',
+    description: 'Master English with our free interactive tools, games, and comprehensive lessons.',
+    images: ['/Images/og-image.png'],
+    creator: '@watchtolead',
+  },
   icons: {
     icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
-
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -34,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-   
+
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${jakarta.variable} font-sans`}>
         <link rel="icon" href="/favicon-new.ico" />
@@ -44,7 +86,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />   
+          <Header />
           <main>{children}</main>
           <YoutubeButton />
           <Footer />
@@ -52,6 +94,6 @@ export default function RootLayout({
         <BackToTop />
       </body>
     </html>
-  
+
   );
 }
