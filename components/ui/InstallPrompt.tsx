@@ -23,11 +23,8 @@ export default function InstallPrompt() {
         // Check if running in standalone mode (already installed)
         const isStandalone = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
 
+        // Only hide if app is currently installed
         if (isStandalone) return;
-
-        // Check if user already dismissed it
-        const dismissed = localStorage.getItem('install-prompt-dismissed');
-        if (dismissed) return;
 
         // Handle Android/Desktop install prompt
         const handleBeforeInstallPrompt = (e: Event) => {
@@ -55,14 +52,12 @@ export default function InstallPrompt() {
             if (outcome === 'accepted') {
                 setDeferredPrompt(null);
                 setShowPrompt(false);
-                localStorage.setItem('install-prompt-dismissed', 'true');
             }
         }
     };
 
     const handleDismiss = () => {
         setShowPrompt(false);
-        localStorage.setItem('install-prompt-dismissed', 'true');
     };
 
     return (
