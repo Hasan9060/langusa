@@ -6,6 +6,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import BackToTop from "@/components/ui/BackToTop";
 import YoutubeButton from "@/components/ui/YoutubeButton";
+import SplashScreen from "@/components/ui/SplashScreen";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -91,6 +92,7 @@ export default function RootLayout({
           <YoutubeButton />
           <Footer />
         </ThemeProvider>
+        <SplashScreen />
         <BackToTop />
       </body>
     </html>
