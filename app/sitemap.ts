@@ -1,7 +1,7 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://watchtolead.com';
+    const baseUrl = 'https://watchtolead.com'
 
     // Core pages
     const routes = [
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: route === '' ? 1 : 0.8,
-    }));
+    }))
 
     // Game subpages
     const gameRoutes = [
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
         priority: 0.6,
-    }));
+    }))
 
     // Vocabulary subpages
     const vocabRoutes = [
@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.7,
-    }));
+    }))
 
-    return [...routes, ...gameRoutes, ...vocabRoutes];
+    return [...routes, ...gameRoutes, ...vocabRoutes]
 }

@@ -182,26 +182,26 @@ export default function Team() {
 
       <section ref={ref} className="container mx-auto mt-12 px-4 md:px-8 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:20px_20px] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] dark:bg-black">
         <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-bold mb-9 text-center text-gray-900 dark:text-white"
-      >
-        Meet Our Team
-      </motion.h2>
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold mb-9 text-center text-gray-900 dark:text-white"
+        >
+          Meet Our Team
+        </motion.h2>
 
         <div className="flex flex-wrap justify-center gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
-            whileHover={{ y: -10 }}
-            className="w-[280px]"
-          >
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              whileHover={{ y: -10 }}
+              className="w-[280px]"
+            >
               <div className="relative flex items-center justify-center">
                 <div className="absolute left-1/2 top-0 h-full w-full -translate-x-1/2">
                   <Image
@@ -245,4 +245,3 @@ export default function Team() {
     </>
   )
 }
-```
