@@ -68,7 +68,7 @@ export default function HeroSection() {
 
       {/* Release bar */}
       <div className="w-full bg-red-700 text-white text-sm font-medium text-center py-1 px-2 truncate">
-       Version 2.0 was launched! — Version 3.0 is on the way!
+        Version 3.0 was launched! — Version 3.1 is on the way!
       </div>
 
       {/* Fun fact bar */}
@@ -87,22 +87,25 @@ export default function HeroSection() {
               "text-center lg:text-left items-center lg:items-start"
             )}
           >
-            <div className="mt-10 lg:mt-6 inline-flex items-center space-x-2 rounded-full px-3 py-1 text-sm bg-primary/10 text-primary mb-6 w-fit mx-auto lg:mx-0">
-              <span>Your Journey to Fluent English Starts Here.</span>
+            <div className="mt-10 lg:mt-6 inline-flex items-center space-x-2 rounded-full px-4 py-2 text-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold mb-6 w-fit mx-auto lg:mx-0 shadow-lg">
+              <span>Transform Your English Skills Today</span>
             </div>
 
             <h1
-              className={`${rancho.className} text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-3xl mx-auto lg:mx-0`}
+              className={`${rancho.className} text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 max-w-3xl mx-auto lg:mx-0`}
             >
-              Learn English online and improve your skills through our high-quality{" "}
-              <span className="bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">
-                courses{" "}
-                <span className="text-black dark:text-white">and</span> resources.
+              Master English with{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Expert-Led Courses
+              </span>{" "}
+              <span className="text-black dark:text-white">&</span>{" "}
+              <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
+                Free Resources
               </span>
             </h1>
 
-            <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              Everything you find here has been specially created by Watch to Lead.
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
+              Join thousands of learners worldwide. Access premium courses, interactive games, and vocabulary builders - all designed to make learning English fun and effective.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 w-full">
@@ -135,15 +138,27 @@ export default function HeroSection() {
 
             {/* Reviews */}
             <div className="mt-12 flex items-center space-x-6">
-              <div className="flex -space-x-2">
-                {["JD", "MS", "AK", "TW"].map((name, i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-muted/80 border-2 border-background flex items-center justify-center text-xs font-medium"
-                  >
-                    {name}
-                  </div>
-                ))}
+              <div className="flex -space-x-3">
+                <img
+                  src="https://img.freepik.com/premium-photo/portrait-smiling-young-college-student-karachi-pakistan_1168123-48428.jpg"
+                  alt="Student"
+                  className="w-12 h-12 rounded-full border-3 border-background object-cover"
+                />
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Student"
+                  className="w-12 h-12 rounded-full border-3 border-background object-cover"
+                />
+                <img
+                  src="https://img.freepik.com/premium-photo/cute-lovely-school-children-classroom-having-education-activities_21730-1966.jpg"
+                  alt="Student"
+                  className="w-12 h-12 rounded-full border-3 border-background object-cover"
+                />
+                <img
+                  src="https://randomuser.me/api/portraits/men/86.jpg"
+                  alt="Student"
+                  className="w-12 h-12 rounded-full border-3 border-background object-cover"
+                />
               </div>
               <div>
                 <div className="flex items-center">
@@ -159,7 +174,7 @@ export default function HeroSection() {
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-medium text-foreground">4.9/5</span> from 200+ reviews
+                  <span className="font-bold text-foreground">4.9/5</span> from 500+ happy students
                 </p>
               </div>
             </div>
@@ -214,8 +229,8 @@ export default function HeroSection() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm font-medium">Connect with Students</p>
-                    <p className="text-2xl font-bold">4k+</p>
+                    <p className="text-sm font-medium">Active Learners</p>
+                    <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">9.2k+</p>
                   </div>
                 </div>
               </div>

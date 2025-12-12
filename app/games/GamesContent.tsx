@@ -13,7 +13,15 @@ import {
     Microscope,
     BrainCircuit,
     ArrowRight,
-    Gamepad2
+    Gamepad2,
+    Globe,
+    Zap,
+    History,
+    Music,
+    Shapes,
+    Binary,
+    Dna,
+    Palette
 } from 'lucide-react';
 
 const games = [
@@ -88,6 +96,78 @@ const games = [
         color: 'text-pink-500',
         bg: 'bg-pink-500/10',
         href: '/games/memory'
+    },
+    {
+        id: 'geography',
+        title: 'Geography Master',
+        description: 'Match countries with their capitals around the world!',
+        icon: Globe,
+        color: 'text-sky-500',
+        bg: 'bg-sky-500/10',
+        href: '/games/geography'
+    },
+    {
+        id: 'typing',
+        title: 'Speed Typing',
+        description: 'Test your typing speed and accuracy in this fast-paced challenge!',
+        icon: Zap,
+        color: 'text-emerald-500',
+        bg: 'bg-emerald-500/10',
+        href: '/games/typing'
+    },
+    {
+        id: 'history',
+        title: 'Timeline Challenge',
+        description: 'Arrange historical events in the correct chronological order.',
+        icon: History,
+        color: 'text-amber-500',
+        bg: 'bg-amber-500/10',
+        href: '/games/history'
+    },
+    {
+        id: 'music',
+        title: 'Musical Memory',
+        description: 'Remember and repeat musical sequences in this Simon-style game!',
+        icon: Music,
+        color: 'text-violet-500',
+        bg: 'bg-violet-500/10',
+        href: '/games/music'
+    },
+    {
+        id: 'pattern',
+        title: 'Pattern Memory',
+        description: 'Watch the pattern and recreate it from memory!',
+        icon: Shapes,
+        color: 'text-rose-500',
+        bg: 'bg-rose-500/10',
+        href: '/games/pattern'
+    },
+    {
+        id: 'binary',
+        title: 'Binary Challenge',
+        description: 'Convert decimal numbers to binary and master computer math!',
+        icon: Binary,
+        color: 'text-cyan-500',
+        bg: 'bg-cyan-500/10',
+        href: '/games/binary'
+    },
+    {
+        id: 'biology',
+        title: 'Biology Quiz',
+        description: 'Classify organisms into their correct biological kingdoms!',
+        icon: Dna,
+        color: 'text-lime-500',
+        bg: 'bg-lime-500/10',
+        href: '/games/biology'
+    },
+    {
+        id: 'art',
+        title: 'Color Mixer',
+        description: 'Mix primary colors to create beautiful new colors!',
+        icon: Palette,
+        color: 'text-fuchsia-500',
+        bg: 'bg-fuchsia-500/10',
+        href: '/games/art'
     }
 ];
 

@@ -153,25 +153,119 @@ export default function CoursesSection() {
   }
 
   return (
-    <section id="courses" className="py-10 sm:py-16 relative overflow-hidden bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:20px_20px] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] dark:bg-black">
-      <div className="container px-4 mx-auto" ref={ref}>
-        {/* Header */}
+    <section id="courses" className="py-10 sm:py-20 relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-blue-950/30 dark:to-purple-950/30">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 90, 0],
+            opacity: [0.1, 0.2, 0.1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [0, -90, 0],
+            opacity: [0.1, 0.2, 0.1],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            y: [0, -30, 0],
+            opacity: [0.05, 0.15, 0.05],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl"
+        />
+      </div>
+
+      <div className="container px-4 mx-auto relative z-10" ref={ref}>
+        {/* Header with Amazing Animations */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-12"
+          className="text-center max-w-4xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 text-sm font-medium mb-4">
-            <Sparkles size={16} />
+          {/* Floating Badge */}
+          <motion.div
+            initial={{ scale: 0, rotate: -180 }}
+            animate={isInView ? { scale: 1, rotate: 0 } : {}}
+            transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold mb-6 shadow-xl"
+          >
+            <motion.div
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+            >
+              <Sparkles size={18} />
+            </motion.div>
             Popular Courses
-          </div>
-          <h2 className="text-3xl sm:text-5xl font-bold mb-4 bg-gradient-to-br from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+          </motion.div>
+
+          {/* Main Title with Gradient */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-4xl sm:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+          >
             Master New Skills
-          </h2>
-          <p className="text-sm sm:text-lg text-muted-foreground">
+          </motion.h2>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+          >
             Transform your career with courses designed by industry experts. Learn at your own pace with hands-on projects.
-          </p>
+          </motion.p>
+
+          {/* Stats Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="flex flex-wrap justify-center gap-8 text-center"
+          >
+            <motion.div whileHover={{ scale: 1.1 }} className="flex flex-col items-center">
+              <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                9.2k+
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Students</div>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.1 }} className="flex flex-col items-center">
+              <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                5+
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Courses</div>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.1 }} className="flex flex-col items-center">
+              <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                4.8★
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Rating</div>
+            </motion.div>
+          </motion.div>
         </motion.div>
 
         {/* 🎮 Mobile 3D Carousel */}
