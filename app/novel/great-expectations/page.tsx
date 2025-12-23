@@ -11,32 +11,63 @@ export default function GreatExpectationsPage() {
             name: "Pip (Philip Pirrip)",
             role: "The Protagonist",
             description: "An orphan who dreams of becoming a gentleman. His journey of self-discovery, ambition, and moral growth forms the heart of the novel.",
-            image: "https://images.unsplash.com/photo-1488161628813-99c974c76045?auto=format&fit=crop&q=80&w=300&h=300", // Placeholder for young man
+            image: "https://comicbook.com/wp-content/uploads/sites/4/2025/04/arthur-havisham-dickensian-still.jpg", // Placeholder for young man
         },
         {
             name: "Estella Havisham",
             role: "The Love Interest",
             description: "Miss Havisham's beautiful but cold adopted daughter. Raised to break men's hearts, she is Pip's unattainable love.",
-            image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300&h=300", // Placeholder for elegant woman
+            image: "https://th.bing.com/th/id/R.0ac82df772e506b8b65cac13a5e6f42e?rik=biez%2bFzA7WUU2g&riu=http%3a%2f%2fwww.aceshowbiz.com%2fimages%2fstill%2fgreat-expecations-omg01.jpg&ehk=PyQ%2frDUVN6kaYk8SPRksSDdbz0tTZnkfQOMPTiH%2bBg8%3d&risl=&pid=ImgRaw&r=0", // Placeholder for elegant woman
         },
         {
             name: "Miss Havisham",
             role: "The Eccentric",
             description: "A wealthy spinster who was left at the altar. She lives in Satis House, wearing her wedding dress, frozen in time and bitter.",
-            image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300&h=300", // Placeholder for older woman
+            image: "https://3.bp.blogspot.com/-3FtZNLwjnnU/UTn5luoRwfI/AAAAAAAAAWQ/3IsUn6d7TeY/s1600/Helena-Bonham-Carter-As-Miss-Havisham.jpg", // Placeholder for older woman
         },
         {
             name: "Abel Magwitch",
             role: "The Benefactor",
             description: "A fearsome convict whom Pip helps as a child. He later becomes Pip's secret benefactor, funding his transformation into a gentleman.",
-            image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=300&h=300", // Placeholder for rough man
+            image: "https://ichef.bbci.co.uk/images/ic/480x270/p02cdjlt.jpg",
         },
         {
             name: "Joe Gargery",
             role: "The Faithful Friend",
             description: "Pip's brother-in-law, a blacksmith. He represents simple kindness, loyalty, and unconditional love throughout Pip's life.",
-            image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e194?auto=format&fit=crop&q=80&w=300&h=300", // Placeholder for kind man
+            image: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/71f0e52e-90da-423b-b8dc-e46aa03d8247/di4dm3d-f6fe4336-e69f-4040-af4a-2dd447ae00c3.jpg/v1/fill/w_1024,h_768,q_75,strp/joe_gargery__great_expectations___a_large__strong__by_jameshosie1995_di4dm3d-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzY4IiwicGF0aCI6IlwvZlwvNzFmMGU1MmUtOTBkYS00MjNiLWI4ZGMtZTQ2YWEwM2Q4MjQ3XC9kaTRkbTNkLWY2ZmU0MzM2LWU2OWYtNDA0MC1hZjRhLTJkZDQ0N2FlMDBjMy5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.I_ft-UCgs9fxi-SW0liWVAQEl5_Yp1uYadIRjkawBE8", // Placeholder for kind man
         },
+        {
+    name: "Biddy",
+    role: "Wisdom and Simplicity",
+    description: "A kind, intelligent village girl who helps Pip with his education. She represents moral clarity, humility, and contentment. Pip later realizes her true worth.",
+    image: "https://image.tmdb.org/t/p/original/fD2cEAUsjmuyRAoiLhyUgMtQNnP.jpg", 
+        },
+{
+    name: "Mrs. Joe Gargery",
+    role: "Harsh Authority",
+    description: "Pip’s elder sister who raises him 'by hand'. She is violent, bitter, and dominating. After being attacked, she becomes quieter, showing how cruelty damages relationships.",
+    image: "https://tse2.mm.bing.net/th/id/OIP.dLyjyhrzNmwgwVnQZad8MwHaE7?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3", // Placeholder for stern woman
+},
+{
+    name: "Herbert Pocket",
+    role: "The Loyal Friend",
+    description: "Pip’s closest friend in London. Cheerful, honest, and supportive, Herbert stands by Pip during financial trouble and helps plan Magwitch’s escape.",
+    image: "https://th.bing.com/th/id/R.3104d8ad0d6159aa69a8ac94c2705c16?rik=AsdrMABPNa1A9Q&pid=ImgRaw&r=0", // Placeholder for friendly young man
+},
+{
+    name: "Mr. Jaggers",
+    role: "Law and Power",
+    description: "A powerful and intimidating lawyer who manages Pip’s expectations. He represents the cold, emotionless nature of the legal system and social power.",
+    image: "https://th.bing.com/th/id/OIP.jQ-u9oHKDPwvoywLYaMVKQHaDz?o=7&cb=ucfimg2&rm=3&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3", // Placeholder for stern lawyer
+},
+{
+    name: "Wemmick",
+    role: "Dual Personality",
+    description: "Jaggers’ clerk who shows two personalities: cold and practical at work, but warm and caring at home. He teaches Pip the importance of separating work from personal life.",
+    image: "https://th.bing.com/th/id/R.c4b49daa16765065aa551b2ebf13f2f4?rik=XJ%2bKWfKUjvdFkg&pid=ImgRaw&r=0", // Placeholder for quirky man
+},
+
     ];
 
     return (

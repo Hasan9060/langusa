@@ -9,7 +9,7 @@ export default function MeetOurTeamBanner() {
       {/* Left: Image */}
       <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
         <Image
-          src="https://img.freepik.com/premium-vector/team-puzzle-jigsaw-connect-teamwork-solving-problem-cooperation-team-success_997622-13397.jpg" // replace with your image path
+          src="https://img.freepik.com/premium-vector/team-puzzle-jigsaw-connect-teamwork-solving-problem-cooperation-team-success_997622-13397.jpg" 
           alt="College building"
           width={400}
           height={200}
