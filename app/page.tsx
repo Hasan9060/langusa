@@ -6,6 +6,8 @@ import Courses from '@/components/sections/Courses';
 import Bannerteam from '@/components/banners/Bannerteam';
 import Ebooks from '@/components/banners/movies';
 
+import NovelBanner from '@/components/banners/NovelBanner';
+
 export default function Home() {
   return (
     <>
@@ -13,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <DictionaryCard />
       <Courses />
+      <NovelBanner />
       <Ebooks />
       <Bannerteam />
       <TestimonialsSection />
