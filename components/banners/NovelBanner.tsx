@@ -116,7 +116,7 @@ export default function NovelBanner() {
                         <div className="relative h-full w-full rounded-lg overflow-hidden shadow-2xl border-2 border-white/10 bg-slate-800 flex flex-col items-center justify-center p-8 text-center">
                             {/* Since we don't have a specific book cover image, we'll design a nice CSS cover or use a generic one. 
                    Ideally, we'd use a real image, but for now I'll make a styled 'cover' */}
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c')] bg-cover opacity-20"></div>
+                            <div className="absolute inset-0 bg-[url('https://tse1.mm.bing.net/th/id/OIP.kioaQwxImsisnVZGF5wbHwHaL2?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3')] bg-cover opacity-20"></div>
                             <div className="relative z-10 border-4 border-double border-amber-500/50 w-full h-full flex flex-col items-center justify-center p-6">
                                 <h3 className="text-3xl font-serif font-bold text-amber-100 mb-2">Great Expectations</h3>
                                 <p className="text-sm font-serif italic text-cyan-200 mb-8">Charles Dickens</p>
