@@ -5,12 +5,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { GraduationCap, Sparkles } from 'lucide-react';
 
 export default function SplashScreen() {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        const hasSeenSplash = sessionStorage.getItem('hasSeenSplash');
+        if (hasSeenSplash) {
+            setIsVisible(false);
+            return;
+        }
+
+        setIsVisible(true);
         const timer = setTimeout(() => {
             setIsVisible(false);
-        }, 2000); // Show for 2 seconds
+            sessionStorage.setItem('hasSeenSplash', 'true');
+        }, 1200); // Reduced from 2s to 1.2s for better UX
 
         return () => clearTimeout(timer);
     }, []);

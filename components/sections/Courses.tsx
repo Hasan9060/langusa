@@ -16,6 +16,7 @@ import {
   ChevronLeft,
   ChevronRight
 } from "lucide-react"
+import Image from 'next/image';
 import { cn } from "@/lib/utils"
 
 const courses = [
@@ -114,11 +115,11 @@ export default function CoursesSection() {
   }, [visibleCourses.length])
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+    if (typeof window !== 'undefined' && window.innerWidth < 768 && isInView) {
       const timer = setInterval(handleNext, 6000)
       return () => clearInterval(timer)
     }
-  }, [handleNext])
+  }, [handleNext, isInView])
 
   // 🎮 3D Gaming Style Transform
   const getCardStyle = (index: number) => {
@@ -293,7 +294,7 @@ export default function CoursesSection() {
                   >
                     <Card className={cn("w-[280px] h-[420px] overflow-hidden border-0 rounded-2xl shadow-2xl", course.bgColor)}>
                       <div className="relative h-40 overflow-hidden">
-                        <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
+                        <Image src={course.image} alt={course.title} fill className="object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                       </div>
 
@@ -342,7 +343,7 @@ export default function CoursesSection() {
             >
               <Card className={cn("h-full relative overflow-hidden border-0 shadow-xl rounded-3xl", course.bgColor)}>
                 <div className="relative h-48 overflow-hidden">
-                  <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
+                  <Image src={course.image} alt={course.title} width={400} height={200} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
 

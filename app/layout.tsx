@@ -94,7 +94,6 @@ export default function RootLayout({
           <YoutubeButton />
           <Footer />
         </ThemeProvider>
-        <SplashScreen />
         <InstallPrompt />
         <BackToTop />
       </body>

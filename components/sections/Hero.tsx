@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -28,6 +28,35 @@ const funFacts = [
   "Teach to learn faster.",
 ];
 
+const BackgroundDecorations = React.memo(() => {
+  return (
+    <div className="absolute inset-0 -z-10 overflow-hidden">
+      {Array.from({ length: 8 }).map((_, i) => (
+        <div
+          key={i}
+          className={cn(
+            "absolute w-3 h-3 bg-pink-600 dark:bg-yellow-600 rounded-full opacity-60 blur-sm animate-float",
+            i % 3 === 0 && "w-4 h-4 opacity-30",
+            i % 5 === 0 && "opacity-40 blur-md"
+          )}
+          style={{
+            top: `${(i * 123) % 100}%`,
+            left: `${(i * 456) % 100}%`,
+            animationDelay: `${(i * 0.5) % 5}s`,
+            animationDuration: `${8 + (i % 4)}s`,
+          }}
+        />
+      ))}
+
+      {/* Gradient overlays */}
+      <div className="absolute top-0 right-0 w-full h-[90%] bg-gradient-to-bl from-indigo-500/10 via-green-500/5 to-transparent rounded-bl-[100px]" />
+      <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-bl from-indigo-500/10 via-green-500/5 to-transparent rounded-tr-[100px]" />
+    </div>
+  );
+});
+
+BackgroundDecorations.displayName = 'BackgroundDecorations';
+
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [factIndex, setFactIndex] = useState(0);
@@ -42,29 +71,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center pt-24 overflow-hidden">
-      {/* Floating background dots */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        {Array.from({ length: 15 }).map((_, i) => (
-          <div
-            key={i}
-            className={cn(
-              "absolute w-3 h-3 bg-pink-600 dark:bg-yellow-600 rounded-full opacity-80 blur-sm animate-float",
-              i % 3 === 0 && "w-4 h-4 opacity-40",
-              i % 5 === 0 && "opacity-50 blur-md"
-            )}
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${6 + Math.random() * 6}s`,
-            }}
-          />
-        ))}
-
-        {/* Gradient overlays */}
-        <div className="absolute top-0 right-0 w-full h-[90%] bg-gradient-to-bl from-indigo-500/10 via-green-500/5 to-transparent rounded-bl-[100px]" />
-        <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-bl from-indigo-500/10 via-green-500/5 to-transparent rounded-tr-[100px]" />
-      </div>
+      <BackgroundDecorations />
 
       {/* Release bar */}
       <div className="w-full bg-red-700 text-white text-sm font-medium text-center py-1 px-2 truncate">
@@ -139,26 +146,42 @@ export default function HeroSection() {
             {/* Reviews */}
             <div className="mt-12 flex items-center space-x-6">
               <div className="flex -space-x-3">
-                <img
-                  src="https://img.freepik.com/premium-photo/portrait-smiling-young-college-student-karachi-pakistan_1168123-48428.jpg"
-                  alt="Student"
-                  className="w-12 h-12 rounded-full border-3 border-background object-cover"
-                />
-                <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  alt="Student"
-                  className="w-12 h-12 rounded-full border-3 border-background object-cover"
-                />
-                <img
-                  src="https://img.freepik.com/premium-photo/cute-lovely-school-children-classroom-having-education-activities_21730-1966.jpg"
-                  alt="Student"
-                  className="w-12 h-12 rounded-full border-3 border-background object-cover"
-                />
-                <img
-                  src="https://randomuser.me/api/portraits/men/86.jpg"
-                  alt="Student"
-                  className="w-12 h-12 rounded-full border-3 border-background object-cover"
-                />
+                <div className="relative w-12 h-12 rounded-full border-3 border-background overflow-hidden">
+                  <Image
+                    src="https://img.freepik.com/premium-photo/portrait-smiling-young-college-student-karachi-pakistan_1168123-48428.jpg"
+                    alt="Student"
+                    fill
+                    className="object-cover"
+                    sizes="48px"
+                  />
+                </div>
+                <div className="relative w-12 h-12 rounded-full border-3 border-background overflow-hidden">
+                  <Image
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Student"
+                    fill
+                    className="object-cover"
+                    sizes="48px"
+                  />
+                </div>
+                <div className="relative w-12 h-12 rounded-full border-3 border-background overflow-hidden">
+                  <Image
+                    src="https://img.freepik.com/premium-photo/cute-lovely-school-children-classroom-having-education-activities_21730-1966.jpg"
+                    alt="Student"
+                    fill
+                    className="object-cover"
+                    sizes="48px"
+                  />
+                </div>
+                <div className="relative w-12 h-12 rounded-full border-3 border-background overflow-hidden">
+                  <Image
+                    src="https://randomuser.me/api/portraits/men/86.jpg"
+                    alt="Student"
+                    fill
+                    className="object-cover"
+                    sizes="48px"
+                  />
+                </div>
               </div>
               <div>
                 <div className="flex items-center">

@@ -1,12 +1,26 @@
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/sections/Hero';
 import ServicesSection from '@/components/sections/Services';
-import TestimonialsSection from '@/components/sections/Testimonials';
-import DictionaryCard from '@/components/sections/DictionaryCard';
-import Courses from '@/components/sections/Courses';
-import Bannerteam from '@/components/banners/Bannerteam';
-import Ebooks from '@/components/banners/movies';
 
-import NovelBanner from '@/components/banners/NovelBanner';
+// Dynamically import heavy sections
+const TestimonialsSection = dynamic(() => import('@/components/sections/Testimonials'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 dark:bg-gray-800 rounded-3xl" />
+});
+const DictionaryCard = dynamic(() => import('@/components/sections/DictionaryCard'), {
+  loading: () => <div className="h-64 animate-pulse bg-gray-100 dark:bg-gray-800 rounded-3xl" />
+});
+const Courses = dynamic(() => import('@/components/sections/Courses'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 dark:bg-gray-800 rounded-3xl" />
+});
+const Bannerteam = dynamic(() => import('@/components/banners/Bannerteam'), {
+  loading: () => <div className="h-64 animate-pulse bg-gray-100 dark:bg-gray-800 rounded-3xl" />
+});
+const Ebooks = dynamic(() => import('@/components/banners/movies'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 dark:bg-gray-800 rounded-3xl" />
+});
+const NovelBanner = dynamic(() => import('@/components/banners/NovelBanner'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100 dark:bg-gray-800 rounded-3xl" />
+});
 
 export default function Home() {
   return (

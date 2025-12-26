@@ -4,8 +4,19 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true,
-    domains: ['lh3.googleusercontent.com', 'graph.facebook.com', 'platform-lookaside.fbsbx.com'],
+    domains: [
+      'lh3.googleusercontent.com',
+      'graph.facebook.com',
+      'platform-lookaside.fbsbx.com',
+      'img.freepik.com',
+      'randomuser.me',
+      'miro.medium.com',
+      'static.vecteezy.com',
+      'cdn.pixabay.com'
+    ],
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   experimental: {
     serverActions: {
@@ -13,6 +24,12 @@ const nextConfig = {
       allowedOrigins: ["*"],
     },
   },
+  // Optimize production builds
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  swcMinify: true,
+  poweredByHeader: false,
 };
 
 module.exports = nextConfig;
