@@ -102,7 +102,7 @@ export default function GreatExpectationsPage() {
                         allowFullScreen
                         scrolling="no"
                         className="w-full h-full border-none"
-                        src="https://heyzine.com/flip-book/06985d2124.html"
+                        src="https://heyzine.com/flip-book/16b9353d31.html"
                     ></iframe>
                 </motion.div>
                 <div className="flex justify-center mt-4 text-sm text-muted-foreground">
