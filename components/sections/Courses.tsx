@@ -178,7 +178,7 @@ export default function CoursesSection() {
                       <Link href={course.link} className="mt-auto">
                         <Button
                           className={cn(
-                            "w-full h-12 rounded-2xl text-white font-bold shadow-lg transition-transform active:scale-95",
+                            "w-full h-12 rounded-2xl text-white font-bold shadow-lg transition-transform active:scale-95 dark:text-black",
                             course.color
                           )}
                         >
