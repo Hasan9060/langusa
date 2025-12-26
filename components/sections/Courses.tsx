@@ -93,21 +93,21 @@ export default function CoursesSection() {
     if (position === 1)
       return {
         transform:
-          "translateX(220px) scale(0.85) rotateY(-10deg) translateZ(-60px)",
+          "translateX(100px) scale(0.8) rotateY(-15deg) translateZ(-100px)",
         zIndex: 20,
-        opacity: 0.7,
+        opacity: 0.6,
       }
 
     if (position === total - 1)
       return {
         transform:
-          "translateX(-220px) scale(0.85) rotateY(10deg) translateZ(-60px)",
+          "translateX(-100px) scale(0.8) rotateY(15deg) translateZ(-100px)",
         zIndex: 20,
-        opacity: 0.7,
+        opacity: 0.6,
       }
 
     return {
-      transform: "scale(0.6) translateZ(-200px)",
+      transform: "scale(0.5) translateZ(-300px)",
       zIndex: 10,
       opacity: 0,
     }
@@ -120,19 +120,22 @@ export default function CoursesSection() {
     >
       <div ref={ref} className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 text-sm font-medium mb-6">
-            <Sparkles size={18} /> Popular Courses
+        <div className="text-center max-w-4xl mx-auto mb-16 px-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100/50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-bold mb-6">
+            <Sparkles size={18} className="animate-pulse" /> Popular Courses
           </div>
 
-          <h2 className="text-5xl font-black text-green-500">
+          <h2 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
             Master New Skills
           </h2>
+          <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
+            Level up your future with courses designed to help you succeed in the digital world.
+          </p>
         </div>
 
         {/* 📱 MOBILE CAROUSEL */}
         <div className="block md:hidden">
-          <div className="relative h-[500px] flex items-center justify-center perspective-[1000px]">
+          <div className="relative h-[480px] flex items-center justify-center perspective-[1200px] overflow-hidden">
             {visibleCourses.map((course, index) => {
               const style = getCardStyle(index)
               if (style.opacity === 0) return null
@@ -144,37 +147,38 @@ export default function CoursesSection() {
                   style={style}
                   drag="x"
                   dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.2}
+                  dragElastic={0.1}
                   onDragEnd={handleDragEnd}
-                  transition={{ type: "spring", stiffness: 260, damping: 25 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 >
                   <Card
                     className={cn(
-                      "w-[280px] h-[420px] border-0 rounded-2xl shadow-2xl overflow-hidden",
+                      "w-[260px] h-[400px] border-0 rounded-3xl shadow-2xl overflow-hidden",
                       course.bgColor
                     )}
                   >
-                    <div className="h-40 overflow-hidden">
+                    <div className="h-36 overflow-hidden relative">
                       <img
                         src={course.image}
                         alt={course.title}
                         className="w-full h-full object-cover"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                     </div>
 
-                    <CardContent className="p-5 flex flex-col h-[220px]">
-                      <CardTitle className="text-lg font-bold mb-2">
+                    <CardContent className="p-6 flex flex-col h-[264px]">
+                      <CardTitle className="text-lg font-bold mb-3 leading-tight text-slate-900 dark:text-slate-100">
                         {course.title}
                       </CardTitle>
 
-                      <CardDescription className="text-sm mb-4 flex-grow">
+                      <CardDescription className="text-sm mb-6 flex-grow line-clamp-3 text-slate-600 dark:text-slate-400">
                         {course.description}
                       </CardDescription>
 
-                      <Link href={course.link}>
+                      <Link href={course.link} className="mt-auto">
                         <Button
                           className={cn(
-                            "w-full text-white bg-gradient-to-r",
+                            "w-full h-12 rounded-2xl text-white font-bold shadow-lg transition-transform active:scale-95",
                             course.color
                           )}
                         >
