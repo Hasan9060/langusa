@@ -1,6 +1,20 @@
 import { Video } from '@/components/movie/types/videoint';
 
 export const videos: Video[] = [
+    {
+    id: 31,
+    title: "Great Expectations (1946)",
+    youtubeId: "PUxNs1o94dY",
+    description: "A humble orphan boy in 1810s Kent is given the opportunity to go to London and become a gentleman, with the help of an unknown benefactor(This is the colorized version of the movie).",
+    thumbnail: "https://tse4.mm.bing.net/th/id/OIP.oxB2nwcB9oXruA3alVoPAQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
+    level: "Intermediate",
+    views: "125K",
+    likes: "8.2K",
+    date: "2 weeks ago",
+    category: "Business",
+    instructor: "Director: David Lean",
+    rating: 4.8
+  },
   {
     id: 1,
     title: "The Godfather (1972)",
