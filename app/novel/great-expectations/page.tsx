@@ -90,6 +90,29 @@ export default function GreatExpectationsPage() {
                 </div>
             </section>
 
+            <section className="max-w-7xl mx-auto px-6 py-12">
+  <h2 className="text-2xl font-bold font-serif text-center mb-6">
+    Pakistan China Relations Prize Winning Essay Refined (PDF View)
+  </h2>
+<a
+    href="https://drive.google.com/file/d/1XDCku7Jxsz5K4TDK8Z9gxQJa0IiKs-7H/view"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block px-6 py-3 rounded-xl align border border-slate-300 dark:border-slate-700
+               font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+  >
+    Open PDF
+  </a>
+  <div className="w-full h-[90vh] rounded-xl overflow-hidden border border-slate-300 dark:border-slate-700">
+    <iframe
+      src="https://drive.google.com/file/d/1XDCku7Jxsz5K4TDK8Z9gxQJa0IiKs-7H/preview"
+      className="w-full h-full"
+      allow="autoplay"
+    ></iframe>
+  </div>
+</section>
+
+
             {/* Full PDF Viewer Section */}
             <section className="max-w-7xl mx-auto px-6 pt-12">
                 <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
